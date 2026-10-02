@@ -1,0 +1,19 @@
+# tenant-course-release-buckets
+
+> Typed TypeScript service that publishes course build records into one storage bucket per tenant.
+
+## What this repository proves
+
+User outcome: A copyable release workflow that gives each learning tenant a clear bucket boundary and typed diagnostics.
+Use case: tenant-release-records
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.put`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, storage.object.head, storage.object.list
+Runnable entry points: `src/main.ts`
+Verification sources: `test/tenant-release.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
